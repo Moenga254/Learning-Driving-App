@@ -42,7 +42,7 @@ export default function Home() {
 
         {/* Header */}
         <div style={styles.header}>
-          <h1 style={styles.title}>Driving Learner</h1>
+          <h1 style={styles.title}>Driving App For Learner</h1>
           <p style={styles.subtitle}>Master road signs, model town & car basics</p>
         </div>
 
