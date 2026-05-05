@@ -8,6 +8,7 @@ import Quiz from './pages/Quiz'
 import CarParts from './pages/CarParts'
 import CarPartsList from './pages/CarPartsList'
 import CarPartDetail from './pages/CarPartDetail'
+import ModelTown from './pages/ModelTown'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/car-parts" element={<CarParts />} />
         <Route path="/car-parts/:sectionId" element={<CarPartsList />} />
         <Route path="/car-parts/:sectionId/:partId" element={<CarPartDetail />} />
+        <Route path="/model-town" element={<ModelTown />} />
       </Routes>
     </BrowserRouter>
   )
