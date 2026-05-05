@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import Home from './pages/Home'
 import Category from './pages/Category'
 import SubCategory from './pages/SubCategory'
@@ -26,6 +27,7 @@ function App() {
         <Route path="/car-parts/:sectionId/:partId" element={<CarPartDetail />} />
         <Route path="/model-town" element={<ModelTown />} />
       </Routes>
+      <Analytics />
     </BrowserRouter>
   )
 }
