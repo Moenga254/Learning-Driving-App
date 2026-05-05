@@ -45,6 +45,42 @@ const scenarios = [
         correct: 1,
         explanation: 'Never enter an intersection unless you can clear it completely. Blocking an intersection is illegal and causes gridlock.',
       },
+      {
+        id: 'q4',
+        question: 'You are turning right at a junction and an oncoming vehicle is also turning right. Which is the safest path?',
+        options: [
+          'Pass offside to offside (right side to right side), keeping the other vehicle on your left',
+          'Pass nearside to nearside (left side to left side), cutting across the other vehicle\'s path',
+          'Stop completely and wait for the other vehicle to finish its turn first',
+          'Accelerate and complete your turn before the other vehicle reaches you',
+        ],
+        correct: 0,
+        explanation: 'The offside-to-offside method keeps both vehicles\' paths clear of each other and gives both drivers better visibility of oncoming traffic before completing the turn.',
+      },
+      {
+        id: 'q5',
+        question: 'A traffic officer\'s signal contradicts a green traffic light. What should you do?',
+        options: [
+          'Obey the traffic light — it is a fixed system',
+          'Obey the traffic officer — their signals take precedence over lights',
+          'Stop and wait for both signals to agree',
+          'Proceed slowly and let the officer decide',
+        ],
+        correct: 1,
+        explanation: 'A traffic officer\'s signals always override traffic lights. Officers are present to manage situations the fixed system cannot handle — always follow their instructions.',
+      },
+      {
+        id: 'q6',
+        question: 'You are waiting to turn right and oncoming traffic is continuous. When is it safe to go?',
+        options: [
+          'When you judge you can just make it before the next vehicle arrives',
+          'When there is a gap large enough to complete the turn comfortably without forcing anyone to brake',
+          'After waiting 30 seconds regardless of traffic',
+          'Whenever the vehicle behind you hoots',
+        ],
+        correct: 1,
+        explanation: 'Only turn when there is a clearly safe gap. Never rely on oncoming drivers to slow for you. A "just make it" gap is not a safe gap.',
+      },
     ],
   },
   {
@@ -89,6 +125,42 @@ const scenarios = [
         ],
         correct: 1,
         explanation: 'A ball on the road almost always means a child is following. Slow down immediately and be ready to stop.',
+      },
+      {
+        id: 'q4',
+        question: 'You are driving at 30 km/h and a child darts out 15 metres ahead. Can you stop in time on a dry road?',
+        options: [
+          'Yes — 30 km/h is slow enough to always stop in time',
+          'It depends on your reaction time and braking distance — you may not stop in time',
+          'No — you can never stop within 15 metres at any speed',
+          'Yes — modern ABS systems always prevent hitting pedestrians',
+        ],
+        correct: 1,
+        explanation: 'At 30 km/h, total stopping distance (thinking + braking) is roughly 14–18 metres on a dry road. A child at 15 m is within that range. Speed, reaction time and road surface all affect whether you stop in time.',
+      },
+      {
+        id: 'q5',
+        question: 'You see a school bus stopped ahead with its hazard lights on and children getting off. What must you do?',
+        options: [
+          'Slow down, be prepared to stop, and give children space to cross',
+          'Overtake quickly before more children get off',
+          'Hoot to alert children and proceed at normal speed',
+          'Move to the opposite lane and pass at the same speed',
+        ],
+        correct: 0,
+        explanation: 'Children near a stopped school bus are an extreme hazard. Slow right down, be ready to stop, and never overtake until the road is completely clear.',
+      },
+      {
+        id: 'q6',
+        question: 'At night, you are driving through a residential area. A pedestrian wearing dark clothing steps off the pavement 20 m ahead. What is your greatest challenge?',
+        options: [
+          'The pedestrian breaking traffic law by crossing without a light',
+          'Reduced visibility making it harder to spot the pedestrian early enough to stop safely',
+          'Glare from streetlights affecting your vision',
+          'Your speed limit being different at night',
+        ],
+        correct: 1,
+        explanation: 'Dark clothing dramatically reduces how early you can spot a pedestrian at night. This is why night driving requires much greater caution and reduced speed even in residential zones.',
       },
     ],
   },
@@ -135,6 +207,42 @@ const scenarios = [
         correct: 1,
         explanation: 'Signal left as you pass the exit just before the one you intend to take. This lets other drivers know you are about to leave the roundabout.',
       },
+      {
+        id: 'q4',
+        question: 'You are in the right lane of a two-lane roundabout. You have passed your intended exit by mistake. What should you do?',
+        options: [
+          'Stop and reverse to the correct exit',
+          'Cut across lanes immediately to take the next exit',
+          'Continue around the roundabout and take the correct exit on your next pass',
+          'Signal left and force your way out regardless of other vehicles',
+        ],
+        correct: 2,
+        explanation: 'Never reverse or cut lanes dangerously. Go around again and take the correct exit — this is the safest and legally correct approach.',
+      },
+      {
+        id: 'q5',
+        question: 'A large truck is already in the roundabout and its rear is swinging toward your lane as it navigates a tight turn. What should you do?',
+        options: [
+          'Hoot and maintain your position — you are in your lane',
+          'Hold back and give the truck extra space even if it means waiting',
+          'Accelerate past before the truck reaches you',
+          'Move to the outer edge of your lane to give the truck half your space',
+        ],
+        correct: 1,
+        explanation: 'Large vehicles require extra room due to off-tracking (the rear wheels cut corners). Always give them wide berth — your legal right of way is irrelevant if you are crushed.',
+      },
+      {
+        id: 'q6',
+        question: 'You are taking the first exit (immediately left) at a roundabout. Which lane and signal should you use?',
+        options: [
+          'Right lane, no signal needed',
+          'Left lane, signal left on approach and maintain it through the roundabout',
+          'Left lane, no signal needed since it is the first exit',
+          'Any lane, signal right on approach',
+        ],
+        correct: 1,
+        explanation: 'For the first exit you approach in the left lane and signal left on approach. Maintain the left signal throughout so other drivers know you are exiting immediately.',
+      },
     ],
   },
   {
@@ -179,6 +287,42 @@ const scenarios = [
         ],
         correct: 1,
         explanation: 'Before overtaking always check your mirrors, then your blind spot by glancing over your shoulder, and confirm the lane ahead is clear for a long enough distance to complete the manoeuvre safely.',
+      },
+      {
+        id: 'q4',
+        question: 'Your tyre blows out at 110 km/h on the highway. What is the correct immediate response?',
+        options: [
+          'Brake hard immediately and steer to the shoulder',
+          'Hold the steering wheel firmly, ease off the accelerator gradually, and steer straight — brake gently only once you have control',
+          'Steer sharply to the emergency lane and apply full brakes',
+          'Switch on your hazards and maintain speed until you reach an exit',
+        ],
+        correct: 1,
+        explanation: 'A sudden blowout can pull the car violently. Hard braking or sharp steering causes loss of control. Grip firmly, ease off the throttle gradually, let the car slow naturally, then brake gently to reach the shoulder.',
+      },
+      {
+        id: 'q5',
+        question: 'You are in the fast lane of a three-lane highway and a vehicle behind is flashing its lights at you. What should you do?',
+        options: [
+          'Maintain your speed — it is their problem',
+          'Brake slightly to teach them a lesson',
+          'Move to the middle lane when safe to let the vehicle pass',
+          'Accelerate to match their desired speed',
+        ],
+        correct: 2,
+        explanation: 'The fast lane is for overtaking, not cruising. Once you have passed vehicles to your left, move back. Hogging the fast lane is illegal in many countries and causes dangerous situations.',
+      },
+      {
+        id: 'q6',
+        question: 'You are driving at 120 km/h and the vehicle ahead brakes suddenly. What is the biggest factor determining whether you avoid a collision?',
+        options: [
+          'The quality of your brakes',
+          'Your following distance and reaction time combined',
+          'Whether you have ABS',
+          'The weight of your vehicle',
+        ],
+        correct: 1,
+        explanation: 'At high speed, even excellent brakes cannot save you without adequate following distance. Your reaction time alone consumes metres before braking even begins — following distance is the most critical factor.',
       },
     ],
   },
@@ -225,6 +369,42 @@ const scenarios = [
         correct: 2,
         explanation: 'Driver fatigue is as dangerous as drunk driving. The only safe solution is to pull over and rest. No trick like music or coffee eliminates the danger of drowsiness.',
       },
+      {
+        id: 'q4',
+        question: 'An oncoming vehicle fails to dip its full beam, temporarily blinding you. What is the correct response?',
+        options: [
+          'Flash your full beam back repeatedly until they dip',
+          'Slow down, look to the left edge of the road, and avoid staring into the oncoming lights',
+          'Brake hard and stop immediately',
+          'Close your eyes momentarily and maintain your lane by feel',
+        ],
+        correct: 1,
+        explanation: 'Staring at oncoming lights worsens temporary blindness. Slow down, focus on the left edge of your lane, and wait for your eyes to readjust. Never retaliate with full beam — it blinds them too.',
+      },
+      {
+        id: 'q5',
+        question: 'Your headlights illuminate a pedestrian on the road about 40 m ahead at night. You are travelling at 80 km/h. What is the likely outcome if you brake normally?',
+        options: [
+          'You will stop comfortably before reaching them',
+          'You will likely be unable to stop in time — stopping distance at 80 km/h exceeds 50 m',
+          'ABS will ensure you stop within 20 m',
+          'You will stop exactly at their position',
+        ],
+        correct: 1,
+        explanation: 'At 80 km/h, total stopping distance is approximately 53 m on a dry road. At 40 m, you cannot stop in time — this is exactly why night speed must be kept within your headlight range.',
+      },
+      {
+        id: 'q6',
+        question: 'You are driving on an unlit rural road at night. A large animal appears in your headlights directly ahead. What should you do?',
+        options: [
+          'Swerve hard to avoid it at all costs',
+          'Brake firmly in a straight line rather than swerving, and sound your horn',
+          'Accelerate through to minimise impact time',
+          'Switch to full beam and continue — animals always move away from light',
+        ],
+        correct: 1,
+        explanation: 'Swerving at speed can cause a rollover or head-on collision — often worse than hitting the animal. Brake hard in a straight line to reduce speed as much as possible. Swerve only if you have enough space and speed is low.',
+      },
     ],
   },
 ]
@@ -237,7 +417,7 @@ const difficultyColors = {
 
 export default function ModelTown() {
   const navigate = useNavigate()
-  const [view, setView] = useState('list')           // 'list' | 'detail' | 'quiz' | 'result'
+  const [view, setView] = useState('list')
   const [activeScenario, setActiveScenario] = useState(null)
   const [currentQ, setCurrentQ] = useState(0)
   const [selected, setSelected] = useState(null)
@@ -294,7 +474,6 @@ export default function ModelTown() {
             <p style={styles.subtitle}>Practice real-world driving scenarios</p>
           </div>
 
-          {/* Progress bar */}
           <div style={styles.progressCard}>
             <div style={styles.progressTop}>
               <span style={styles.progressLabel}>Your progress</span>
@@ -306,7 +485,6 @@ export default function ModelTown() {
             <p style={styles.progressSub}>{completed.length} of {scenarios.length} scenarios completed</p>
           </div>
 
-          {/* Scenario cards */}
           <p style={styles.sectionLabel}>Available scenarios</p>
           <div style={styles.cardList}>
             {scenarios.map(scenario => {
@@ -393,7 +571,6 @@ export default function ModelTown() {
         <div style={styles.container}>
           <button style={styles.back} onClick={() => setView('detail')}>← Back</button>
 
-          {/* Progress */}
           <div style={styles.quizProgressWrap}>
             <div style={styles.progressTrack}>
               <div style={{ ...styles.progressFill, width: `${progress}%`, background: diff.color }} />
@@ -401,19 +578,16 @@ export default function ModelTown() {
             <span style={styles.quizProgressLabel}>{currentQ + 1} / {activeScenario.questions.length}</span>
           </div>
 
-          {/* Scenario badge */}
           <div style={{ marginBottom: '1rem' }}>
             <span style={{ ...styles.diffBadge, background: diff.bg, color: diff.color }}>
               {activeScenario.icon} {activeScenario.title}
             </span>
           </div>
 
-          {/* Question */}
           <div style={styles.questionCard}>
             <p style={styles.questionText}>{q.question}</p>
           </div>
 
-          {/* Options */}
           <div style={styles.options}>
             {q.options.map((opt, i) => {
               let optStyle = { ...styles.option }
@@ -423,7 +597,14 @@ export default function ModelTown() {
                 else optStyle = { ...optStyle, opacity: 0.4 }
               }
               return (
-                <button key={i} style={optStyle} onClick={() => handleAnswer(i)} disabled={answered}>
+                <button
+                  key={i}
+                  style={optStyle}
+                  // Blur the button immediately on click to kill browser focus ring
+                  onMouseDown={e => e.currentTarget.blur()}
+                  onClick={() => handleAnswer(i)}
+                  disabled={answered}
+                >
                   <span style={styles.optLetter}>{['A', 'B', 'C', 'D'][i]}</span>
                   <span style={styles.optText}>{opt}</span>
                   {answered && i === q.correct && <span style={{ marginLeft: 'auto' }}>✓</span>}
@@ -433,7 +614,6 @@ export default function ModelTown() {
             })}
           </div>
 
-          {/* Feedback */}
           {answered && (
             <div style={{
               ...styles.feedbackBox,
@@ -533,6 +713,7 @@ const styles = {
     padding: 0,
     marginBottom: '1.25rem',
     display: 'block',
+    outline: 'none',
   },
   header: {
     marginBottom: '1.5rem',
@@ -577,6 +758,7 @@ const styles = {
     borderRadius: '99px',
     overflow: 'hidden',
     marginBottom: '6px',
+    flex: 1,
   },
   progressFill: {
     height: '100%',
@@ -612,6 +794,7 @@ const styles = {
     cursor: 'pointer',
     textAlign: 'left',
     width: '100%',
+    outline: 'none',
   },
   iconWrap: {
     width: '48px',
@@ -711,6 +894,7 @@ const styles = {
     fontWeight: '600',
     cursor: 'pointer',
     marginBottom: '10px',
+    outline: 'none',
   },
   quizProgressWrap: {
     display: 'flex',
@@ -754,14 +938,22 @@ const styles = {
     cursor: 'pointer',
     textAlign: 'left',
     width: '100%',
+    // Kill ALL browser default focus/active styling
+    outline: 'none',
+    WebkitTapHighlightColor: 'transparent',
+    boxShadow: 'none',
   },
   optCorrect: {
     background: '#E9F7EF',
     borderColor: '#1D9E75',
+    outline: 'none',
+    boxShadow: 'none',
   },
   optWrong: {
     background: '#FCEBEB',
     borderColor: '#E24B4A',
+    outline: 'none',
+    boxShadow: 'none',
   },
   optLetter: {
     width: '24px',
@@ -807,6 +999,7 @@ const styles = {
     fontSize: '14px',
     fontWeight: '600',
     cursor: 'pointer',
+    outline: 'none',
   },
   scoreCard: {
     borderRadius: '16px',
