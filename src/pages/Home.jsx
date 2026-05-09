@@ -238,4 +238,10 @@ const styles = {
     color: '#0F6E56',
     fontWeight: '500',
   },
+  footer: {
+    textAlign: 'center',
+    padding: '1rem 0',
+    fontSize: '12px',
+    color: '#f10b0b',
+  },
 }
