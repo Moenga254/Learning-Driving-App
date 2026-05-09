@@ -37,66 +37,72 @@ export default function Home() {
   const navigate = useNavigate()
 
   return (
-    <div style={styles.page} className="page-transition">
-      <div style={styles.container}>
+    <>
+      <div style={styles.page} className="page-transition">
+        <div style={styles.container}>
 
-        {/* Header */}
-        <div style={styles.header}>
-          <h1 style={styles.title}>Driving App For Learner</h1>
-          <p style={styles.subtitle}>Master road signs, model town & car basics</p>
-        </div>
+          {/* Header */}
+          <div style={styles.header}>
+            <h1 style={styles.title}>Driving App For Learner</h1>
+            <p style={styles.subtitle}>Master road signs, model town & car basics</p>
+          </div>
 
-        {/* Road Signs section */}
-        <p style={styles.sectionLabel}>Road Signs</p>
-        <div style={styles.cardList}>
-          {categories.map((cat) => (
+          {/* Road Signs section */}
+          <p style={styles.sectionLabel}>Road Signs</p>
+          <div style={styles.cardList}>
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                style={styles.card}
+                onClick={() => navigate(`/category/${cat.id}`)}
+              >
+                <div style={{ ...styles.iconWrap, background: cat.bg, border: `1px solid ${cat.border}` }}>
+                  <span style={styles.icon}>{cat.icon}</span>
+                </div>
+                <div style={styles.cardText}>
+                  <span style={styles.cardLabel}>{cat.label}</span>
+                  <span style={styles.cardDesc}>{cat.description}</span>
+                </div>
+                <span style={{ ...styles.cardCount, background: cat.bg, color: cat.color }}>
+                  {cat.count}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Other modules */}
+          <p style={styles.sectionLabel}>Learn More</p>
+          <div style={styles.comingGrid}>
+
+            {/* Model Town — now live */}
             <button
-              key={cat.id}
-              style={styles.card}
-              onClick={() => navigate(`/category/${cat.id}`)}
+              style={styles.activeCard}
+              onClick={() => navigate('/model-town')}
             >
-              <div style={{ ...styles.iconWrap, background: cat.bg, border: `1px solid ${cat.border}` }}>
-                <span style={styles.icon}>{cat.icon}</span>
-              </div>
-              <div style={styles.cardText}>
-                <span style={styles.cardLabel}>{cat.label}</span>
-                <span style={styles.cardDesc}>{cat.description}</span>
-              </div>
-              <span style={{ ...styles.cardCount, background: cat.bg, color: cat.color }}>
-                {cat.count}
-              </span>
+              <span style={styles.comingIcon}>🏘️</span>
+              <span style={styles.comingLabel}>Model Town</span>
+              <span style={styles.activeSub}>Traffic simulation</span>
             </button>
-          ))}
-        </div>
 
-        {/* Other modules */}
-        <p style={styles.sectionLabel}>Learn More</p>
-        <div style={styles.comingGrid}>
+            {/* Car Parts — now live */}
+            <button
+              style={styles.activeCard}
+              onClick={() => navigate('/car-parts')}
+            >
+              <span style={styles.comingIcon}>🚗</span>
+              <span style={styles.comingLabel}>Car Parts</span>
+              <span style={styles.activeSub}>27 parts</span>
+            </button>
 
-          {/* Model Town — now live */}
-          <button
-            style={styles.activeCard}
-            onClick={() => navigate('/model-town')}
-          >
-            <span style={styles.comingIcon}>🏘️</span>
-            <span style={styles.comingLabel}>Model Town</span>
-            <span style={styles.activeSub}>Traffic simulation</span>
-          </button>
-
-          {/* Car Parts — now live */}
-          <button
-            style={styles.activeCard}
-            onClick={() => navigate('/car-parts')}
-          >
-            <span style={styles.comingIcon}>🚗</span>
-            <span style={styles.comingLabel}>Car Parts</span>
-            <span style={styles.activeSub}>27 parts</span>
-          </button>
+          </div>
 
         </div>
-
       </div>
-    </div>
+
+      <footer style={{ textAlign: 'center', padding: '1rem 0', fontSize: '12px', color: '#aaa' }}>
+        <p>© 2023 Driving App For Learner. All rights reserved.</p>
+      </footer>
+    </>
   )
 }
 
