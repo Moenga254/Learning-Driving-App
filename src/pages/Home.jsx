@@ -99,7 +99,7 @@ export default function Home() {
         </div>
       </div>
 
-      <footer style={{ textAlign: 'center', padding: '1rem 0', fontSize: '12px', color: '#aaa' }}>
+      <footer style={{ textAlign: 'center', padding: '1rem 0', fontSize: '12px', color: '#f92222' }}>
         <p>© 2023 Driving App For Learner. All rights reserved.</p>
         <p>Created by Kevin Moenga</p>
       </footer>
